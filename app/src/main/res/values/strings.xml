@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="app_name">Chess</string>
+
+    <!--textview-->
+    <string name="blackTurn">BLACK</string>
+    <string name="whiteTurn">WHITE</string>
+    <string name="check">CHECK</string>
+    <string name="promotion">PROMOTION. PLEASE CHOOSE PIECE TO PROMOTE PAWN TO.</string>
+    <string name="blank"></string>
+    <string name="playGame">PLAY CHESS</string>
+    <string name="selectGame">SELECT GAME</string>
+    <string name="sortBy">SORT BY</string>
+    <string name="next">NEXT</string>
+    <string name="blackWin">BLACK WON!</string>
+    <string name="whiteWin">WHITE WON!</string>
+    <string name="datesort">DATE SORT</string>
+    <string name="namesort">NAME SORT</string>
+
+    <string name="error1">Invalid Move</string>
+
+    <!--buttons-->
+    <string name="undo">UNDO</string>
+    <string name="draw">DRAW</string>
+    <string name="resign">RESIGN</string>
+    <string name="recordedGames">RECORDED GAMES</string>
+    <string name="AI">AI</string>
+    <string name="move">MOVE</string>
+
+</resources>
+
+

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".RecordedGameActivity">
+
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="@dimen/boardSize"
+        android:layout_height="@dimen/boardSize"
+        android:layout_marginEnd="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/board_image"
+            android:layout_width="@dimen/boardSize"
+            android:layout_height="@dimen/boardSize"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:baselineAlignBottom="false"
+            android:clickable="false"
+            app:srcCompat="@drawable/chessboard" />
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/board"
+            android:layout_width="@dimen/boardSize"
+            android:layout_height="@dimen/boardSize"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:clickable="true"
+            android:focusable="auto"
+            android:focusableInTouchMode="true"
+            android:overScrollMode="never"
+            android:scrollbarAlwaysDrawHorizontalTrack="false"
+            android:scrollbarAlwaysDrawVerticalTrack="false"
+            app:columnCount="8"
+            app:rowCount="8">
+
+        </androidx.gridlayout.widget.GridLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="46dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <Button
+            android:id="@+id/playGame"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:text="@string/playGame"
+            android:textColor="@color/button2"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/recordedGames"
+            android:layout_width="222dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:text="@string/recordedGames"
+            android:textColor="@color/button1"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/nextMove"
+            android:layout_width="180dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:drawable/btn_default"
+            android:gravity="center"
+            android:text="@string/next"
+            android:textColor="@color/button3"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/checkDisp"
+        android:layout_width="103dp"
+        android:layout_height="21dp"
+        android:gravity="center"
+        android:text="@string/check"
+        android:textColor="@color/button1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/whos_turn_text" />
+
+    <TextView
+        android:id="@+id/whos_turn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginRight="177dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/blackTurn"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/button2"
+        android:textStyle="bold"
+        app:fontFamily="sans-serif-smallcaps"
+        app:layout_constraintBottom_toTopOf="@+id/frameLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
